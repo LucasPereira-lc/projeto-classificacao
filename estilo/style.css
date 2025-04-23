@@ -93,16 +93,43 @@ main.agradecimento {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 370px;
-  height: 374px;
+  width: 320px;
   background: linear-gradient(to bottom, #222933, #171E28);
   padding: 20px;
+  padding-bottom: 40px;
   border-radius: 15px;
 }
 
-main.agredecimento > div.img {
-  background: url('../imagens/illustration-thank-you.svg')no-repeat;
-  background-size: cover;
-  width: 600px;
-  height: 600px;
+main.agradecimento > div {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+main.agradecimento > h3 {
+  background-color: #282E38;
+  color: #d37435;
+  font-weight: 300;
+  margin: auto;
+  width: 170px;
+  padding: 10px;
+  border-radius: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+main.agradecimento > h2 {
+  color: white;
+  font-size: 1.8em;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main.agradecimento > p {
+  color: #8C949F;
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }
