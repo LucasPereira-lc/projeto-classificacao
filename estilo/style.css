@@ -3,6 +3,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-size: 1em
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
@@ -12,25 +13,94 @@ body {
   background-color: #121214;
   display: flex;
   align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 main.classificacao {
+  display: none;
+
+  position: relative;   
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   background: linear-gradient(to bottom, #222933, #171E28);
-  padding: 20px;
-  width: 460px;
-  margin: auto;
-  margin-top: 25vh;
-  border-radius: 10px;
+  padding: 25px;
+  height: 374px;
+  width: 370px;
+  border-radius: 15px;
+  padding-bottom: 40px;
 }
 
 main.classificacao > img.estrela {
   background-color: #262E38;
   padding: 15px;
   border-radius: 50%;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
+main.classificacao > h1 {
+  color: white;
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
+main.classificacao > p {
+  color: #8C949F;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+main.classificacao > div.botoes {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+main.classificacao > div.botoes > button.botao {
+  background-color: #262F38;
+  color: rgb(150, 149, 149);
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  padding: 15px;
+  margin-right: 15px;
+}
+
+main.classificacao > div.botoes > button#b5 {
+  margin-right: 0px;
+}
+
+main.classificacao > button.enviar {
+  display: block;
+  background-color: #FC7613;
+  width: 90%;
+  margin: auto;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+}
 
 main.agradecimento {
-  display: none;
+  position: relative;   
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 370px;
+  height: 374px;
+  background: linear-gradient(to bottom, #222933, #171E28);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+main.agredecimento > img.obr {
+  display: block;
+  margin: auto;
 }
