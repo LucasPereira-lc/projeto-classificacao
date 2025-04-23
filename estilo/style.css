@@ -100,7 +100,9 @@ main.agradecimento {
   border-radius: 15px;
 }
 
-main.agredecimento > img.obr {
-  display: block;
-  margin: auto;
+main.agredecimento > div.img {
+  background: url('../imagens/illustration-thank-you.svg')no-repeat;
+  background-size: cover;
+  width: 600px;
+  height: 600px;
 }
