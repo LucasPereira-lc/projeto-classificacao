@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 350px) and (max-width: 500px) {
+    main.classificacao {
+        width: 300px;
+    }
+
+    main.classificacao > h1 {
+        font-size: 1.8em;
+    }
+
+    main.classificacao > p {
+        font-size: 1em;
+    }
+
+    main.classificacao > div.botoes > button.botao {
+        width: 40px;
+        padding: 12px;
+    }
+
+    main.classificacao > button.enviar {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+}

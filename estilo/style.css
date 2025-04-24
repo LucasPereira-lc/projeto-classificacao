@@ -22,7 +22,6 @@ main.classificacao {
   align-self: center;
   background: linear-gradient(to bottom, #222933, #171E28);
   padding: 25px;
-  height: 374px;
   width: 370px;
   border-radius: 15px;
   padding-bottom: 40px;
@@ -56,8 +55,8 @@ main.classificacao > p {
 }
 
 main.classificacao > div.botoes {
-  text-align: center;
-  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
   margin-bottom: 25px;
 }
 
@@ -70,6 +69,17 @@ main.classificacao > div.botoes > button.botao {
   width: 50px;
   padding: 15px;
   margin-right: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+main.classificacao > div.botoes > button.botao:hover {
+  background-color: white;
+  color: rgb(15, 15, 15);
+}
+
+main.classificacao > div.botoes > button.botao:active {
+  background-color: #FC7613;
 }
 
 main.classificacao > div.botoes > button#b5 {
@@ -79,12 +89,19 @@ main.classificacao > div.botoes > button#b5 {
 main.classificacao > button.enviar {
   display: block;
   background-color: #FC7613;
-  width: 90%;
+  width: 95%;
   margin: auto;
   padding: 15px;
   border: none;
   border-radius: 25px;
   font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+main.classificacao > button.enviar:active {
+  background-color: white;
 }
 
 main.agradecimento {
