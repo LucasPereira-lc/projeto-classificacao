@@ -25,6 +25,7 @@ main.classificacao {
   width: 370px;
   border-radius: 15px;
   padding-bottom: 40px;
+  transition: width .3s, height .3s;
 }
 
 main.classificacao > div.estrela {
@@ -73,13 +74,14 @@ main.classificacao > div.botoes > button.botao {
   transition: background-color 0.3s ease;
 }
 
+button.botao.selecionado {
+  background-color: #FC7613 !important;
+  color: black !important;
+}
+
 main.classificacao > div.botoes > button.botao:hover {
   background-color: white;
   color: rgb(15, 15, 15);
-}
-
-main.classificacao > div.botoes > button.botao:active {
-  background-color: #FC7613;
 }
 
 main.classificacao > div.botoes > button#b5 {

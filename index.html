@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classificação</title>
+    <link rel="shortcut icon" href="imagens/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="stylesheet" href="estilo/media-query.css">
 </head>
 <body>
-    <main class="classificacao">
+    <main class="classificacao" id="tela-classificacao">
         <div class="estrela">
             <img src="imagens/icon-star.svg" alt="ícone estrela">
         </div>
@@ -21,16 +22,50 @@
             <button class="botao">4</button>
             <button class="botao" id="b5">5</button>
         </div>
-            <button class="enviar">ENVIAR</button>
+            <button class="enviar" id="btn-enviar">ENVIAR</button>
     </main>
 
-    <main class="agradecimento">
+    <main class="agradecimento" id="tela-agradecimento">
         <div>
             <img src="imagens/illustration-thank-you.svg" alt="Ilustração de agradecimento">
         </div>
-            <h3>Você selecionou <span id="nota-escolhida"></span>de 5</h3>
+            <h3>Você selecionou <span id="nota-escolhida"></span> de 5</h3>
             <h2>Obrigado!</h2>
             <p>Agradecemos por dedicar seu tempo para nos avaliar. Se precisar de mais suporte, não hesite em entrar em contato!</p>
     </main>
+
+    <script>
+        const btnEnviar = document.getElementById('btn-enviar')
+        const telaClassificacao = document.getElementById('tela-classificacao')
+        const telaAgradecimento = document.getElementById('tela-agradecimento')
+        const botoesNota = document.querySelectorAll('.botao')
+        const notaEscolhida = document.getElementById('nota-escolhida')
+
+        let notaSelecionada = null
+    
+        botoesNota.forEach(botao => {
+            //Pegar a nota clicada
+            botao.addEventListener('click', () => {
+                notaSelecionada = botao.textContent
+
+                // adiciona a classe 'selecionado'
+                botoesNota.forEach(b => b.classList.remove('selecionado'))
+                botao.classList.add('selecionado')
+            })
+        })
+
+        btnEnviar.addEventListener('click', () => {
+            if(notaSelecionada) {
+                //esconder a tela de classificação
+                telaClassificacao.style.display = 'none'
+                //mostrar a tela de agradecimento
+                telaAgradecimento.style.display = 'block'
+                //colocar a nota escolhida no texto
+                notaEscolhida.textContent = notaSelecionada
+            }else {
+                alert('Por favor, selecione uma nota antes de enviar')
+            }
+        })
+    </script>
 </body>
 </html>
