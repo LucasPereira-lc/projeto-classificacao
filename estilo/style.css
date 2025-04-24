@@ -11,21 +11,15 @@
 body {
   font-family: 'Overpass', sans-serif;
   background-color: #121214;
-  display: flex;
-  align-items: center;
-  position: relative;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 main.classificacao {
   display: none;
-
-  position: relative;   
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  align-self: center;
   background: linear-gradient(to bottom, #222933, #171E28);
   padding: 25px;
   height: 374px;
@@ -88,10 +82,8 @@ main.classificacao > button.enviar {
 }
 
 main.agradecimento {
-  position: relative;   
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  
+  align-self: center;
 
   width: 320px;
   background: linear-gradient(to bottom, #222933, #171E28);
